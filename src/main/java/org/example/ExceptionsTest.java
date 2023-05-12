@@ -14,7 +14,7 @@ public class ExceptionsTest  {
         this.confirmPassword = confirmPassword;
     }
 
-    public static void test(String login, String password, String confirmPassword) {
+    public static void test(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
         if (login.length() > 20) {
             throw new WrongLoginException("Слишком длинный логин");
         }
