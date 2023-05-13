@@ -9,11 +9,9 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            test("java_skypro_go", "D_1hWiKjjP_92", "D_1hWiKjjP_9");
-        } catch (WrongLoginException e) {
-            throw new WrongLoginException(e.getMessage());
-        } catch (WrongPasswordException e){
-            throw new WrongPasswordException(e.getMessage());
+            test("java_skypro_go", "D_1hWiKjjP_9", "D_1hWiKjjP_9");
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
